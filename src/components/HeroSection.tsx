@@ -50,31 +50,33 @@ const HeroSection = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative h-[50vh] md:h-[60vh] overflow-hidden bg-white">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7 }}
-          className="absolute inset-0 flex items-center justify-center"
-        >
-          <img
-            src={slides[current].image}
-            alt={slides[current].title}
-            className="max-w-full max-h-full w-auto h-auto object-contain"
-          />
-        </motion.div>
-      </AnimatePresence>
-
-      <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
+    <section className="relative overflow-hidden bg-white">
+      <div className="relative aspect-[21/9] w-full">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="absolute inset-0"
+          >
+            <img
+              src={slides[current].image}
+              alt={slides[current].title}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      <div className="container mx-auto px-4 py-8 relative z-10">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center"
           >
@@ -96,7 +98,7 @@ const HeroSection = () => {
         </AnimatePresence>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="flex justify-center gap-2 pb-6">
         {slides.map((_, i) => (
           <button
             key={i}

@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/images/hero-1.jpg",
+    image: "/hero-bg.jpg",
     title: "Dress Them",
     subtitle: "In Love",
     description: "Premium kids fashion crafted with care. Soft fabrics, elegant designs, and styles they'll love to wear.",
@@ -13,16 +13,6 @@ const slides = [
     ctaLink: "/category/best-seller",
     secondaryCtaText: "Festive Collection",
     secondaryCtaLink: "/category/festive"
-  },
-  {
-    image: "/images/hero-3.png",
-    title: "Festive Joy",
-    subtitle: "Celebrations",
-    description: "Make every occasion special with our exclusive festive wear. Perfect for memories that last.",
-    ctaText: "Shop Festive",
-    ctaLink: "/category/festive",
-    secondaryCtaText: "Sale Items",
-    secondaryCtaLink: "/category/sale"
   }
 ];
 

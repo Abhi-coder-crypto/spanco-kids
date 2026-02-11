@@ -12,6 +12,16 @@ import CartPage from "./pages/CartPage";
 import WishlistPage from "./pages/WishlistPage";
 import ProfilePage from "./pages/ProfilePage";
 import NotFound from "./pages/NotFound";
+import Infant from "./pages/shop/Infant";
+import Boys from "./pages/shop/Boys";
+import Girls from "./pages/shop/Girls";
+import EthnicWear from "./pages/shop/EthnicWear";
+import Sale from "./pages/shop/Sale";
+import SizeGuide from "./pages/help/SizeGuide";
+import TrackOrder from "./pages/help/TrackOrder";
+import Returns from "./pages/help/Returns";
+import FAQs from "./pages/help/FAQs";
+import ContactUs from "./pages/help/ContactUs";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +41,16 @@ const App = () => (
             <Route path="/cart" element={<CartPage />} />
             <Route path="/wishlist" element={<WishlistPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/shop/infant" element={<Infant />} />
+            <Route path="/shop/boys" element={<Boys />} />
+            <Route path="/shop/girls" element={<Girls />} />
+            <Route path="/shop/ethnic-wear" element={<EthnicWear />} />
+            <Route path="/shop/sale" element={<Sale />} />
+            <Route path="/help/size-guide" element={<SizeGuide />} />
+            <Route path="/help/track-order" element={<TrackOrder />} />
+            <Route path="/help/returns" element={<Returns />} />
+            <Route path="/help/faqs" element={<FAQs />} />
+            <Route path="/help/contact" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -15,16 +15,6 @@ const slides = [
     secondaryCtaLink: "/category/festive"
   },
   {
-    image: "/images/hero-2.jpg",
-    title: "New Season",
-    subtitle: "Playful Vibes",
-    description: "Discover our latest collection designed for active kids. Style meets comfort in every stitch.",
-    ctaText: "New Arrivals",
-    ctaLink: "/category/new-arrivals",
-    secondaryCtaText: "Explore More",
-    secondaryCtaLink: "/category/all"
-  },
-  {
     image: "/images/hero-3.png",
     title: "Festive Joy",
     subtitle: "Celebrations",
@@ -68,37 +58,37 @@ const HeroSection = () => {
             />
           </motion.div>
         </AnimatePresence>
+
+        <div className="absolute inset-0 z-10 flex items-end justify-center pb-8 md:pb-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col items-center"
+            >
+              <div className="flex flex-wrap justify-center gap-4 px-4">
+                <Link
+                  to={slides[current].ctaLink}
+                  className="inline-flex items-center justify-center bg-primary text-primary-foreground font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap shadow-md"
+                >
+                  {slides[current].ctaText}
+                </Link>
+                <Link
+                  to={slides[current].secondaryCtaLink}
+                  className="inline-flex items-center justify-center bg-white/90 backdrop-blur-sm text-primary border border-white font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:bg-white transition-all duration-300 whitespace-nowrap shadow-md"
+                >
+                  {slides[current].secondaryCtaText}
+                </Link>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center"
-          >
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to={slides[current].ctaLink}
-                className="inline-flex items-center justify-center bg-primary text-primary-foreground font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap"
-              >
-                {slides[current].ctaText}
-              </Link>
-              <Link
-                to={slides[current].secondaryCtaLink}
-                className="inline-flex items-center justify-center bg-secondary text-secondary-foreground border border-border font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:bg-muted transition-all duration-300 whitespace-nowrap"
-              >
-                {slides[current].secondaryCtaText}
-              </Link>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="flex justify-center gap-2 pb-6">
+      <div className="flex justify-center gap-2 py-4">
         {slides.map((_, i) => (
           <button
             key={i}

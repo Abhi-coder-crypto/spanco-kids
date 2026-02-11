@@ -6,6 +6,10 @@ import categoryGirls from "@/assets/category-girls.jpg";
 import categoryEthnic from "@/assets/category-ethnic.jpg";
 
 const categories = [
+  { title: "Infant", subtitle: "Soft & Gentle", image: categoryInfant, href: "/category/infant" },
+  { title: "Boys", subtitle: "Cool & Trendy", image: categoryBoys, href: "/category/boys" },
+  { title: "Girls", subtitle: "Sweet & Pretty", image: categoryGirls, href: "/category/girls" },
+  { title: "Ethnic Wear", subtitle: "Traditional", image: categoryEthnic, href: "/category/ethnic-wear" },
   { title: "Western Wear", subtitle: "Modern Styles", image: "/images/hero-1.jpg", href: "/category/western-wear" },
   { title: "Best Seller", subtitle: "Most Loved", image: "/images/hero-2.jpg", href: "/category/best-seller" },
   { title: "Sale", subtitle: "Flat 50% Off", image: "/images/hero-3.png", href: "/category/sale" },

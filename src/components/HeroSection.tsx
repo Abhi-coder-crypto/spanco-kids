@@ -69,45 +69,7 @@ const HeroSection = () => {
       </AnimatePresence>
 
       <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            transition={{ duration: 0.5 }}
-            className="max-w-xl text-foreground"
-          >
-            <span className="inline-block text-sm font-body font-medium tracking-[0.2em] uppercase mb-4 text-primary">
-              New Season Collection
-            </span>
-
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
-              {slides[current].title}
-              <br />
-              <span className="text-primary">{slides[current].subtitle}</span>
-            </h1>
-
-            <p className="font-body text-lg mb-8 max-w-md text-muted-foreground">
-              {slides[current].description}
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link
-                to={slides[current].ctaLink}
-                className="inline-flex items-center justify-center bg-primary text-primary-foreground font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-              >
-                {slides[current].ctaText}
-              </Link>
-              <Link
-                to={slides[current].secondaryCtaLink}
-                className="inline-flex items-center justify-center bg-secondary text-secondary-foreground border border-border font-body font-semibold text-sm px-8 py-3.5 rounded-full hover:bg-muted transition-all duration-300"
-              >
-                {slides[current].secondaryCtaText}
-              </Link>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        {/* Text removed from hero image as requested */}
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">

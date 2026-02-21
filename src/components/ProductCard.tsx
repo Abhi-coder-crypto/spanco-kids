@@ -36,7 +36,7 @@ const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           />
 
           {product.badge && (
-            <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-body font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
+            <span className="absolute top-3 left-3 bg-black/80 text-white text-[10px] font-body font-bold px-2.5 py-1 rounded-full uppercase tracking-wide">
               {product.badge}
             </span>
           )}
@@ -79,14 +79,14 @@ const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
               {product.rating} ({product.reviews})
             </span>
           </div>
-          <h3 className="font-body text-sm font-bold text-primary line-clamp-1 transition-colors">
+          <h3 className="font-body text-sm font-medium text-foreground line-clamp-1 group-hover:text-primary transition-colors">
             {product.name}
           </h3>
-          <p className="text-xs font-body text-primary/70 mt-0.5 font-medium">{product.age}</p>
+          <p className="text-xs font-body text-muted-foreground mt-0.5">{product.age}</p>
           <div className="flex items-center gap-2 mt-1.5">
-            <span className="font-body font-bold text-primary">₹{product.price.toLocaleString()}</span>
+            <span className="font-body font-bold text-foreground">₹{product.price.toLocaleString()}</span>
             {product.originalPrice && (
-              <span className="font-body text-[10px] text-muted-foreground line-through decoration-primary/30">₹{product.originalPrice.toLocaleString()}</span>
+              <span className="font-body text-xs text-muted-foreground line-through">₹{product.originalPrice.toLocaleString()}</span>
             )}
           </div>
         </div>

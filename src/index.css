@@ -17,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 20 20% 15%;
 
-    /* Blush pink primary */
-    --primary: 350 55% 62%;
+    /* Fuchsia primary */
+    --primary: 300 100% 50%;
     --primary-foreground: 0 0% 100%;
 
     /* Baby blue secondary */
@@ -30,35 +30,35 @@
     --muted-foreground: 20 10% 50%;
 
     /* Lavender accent */
-    --accent: 270 35% 85%;
-    --accent-foreground: 270 25% 30%;
+    --accent: 300 100% 95%;
+    --accent-foreground: 300 100% 25%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 35 20% 90%;
     --input: 35 20% 90%;
-    --ring: 350 55% 62%;
+    --ring: 300 100% 50%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
     --cream: 40 33% 95%;
-    --blush: 350 55% 62%;
+    --blush: 300 100% 50%;
     --baby-blue: 210 45% 80%;
     --lavender: 270 35% 80%;
     --warm-gold: 38 70% 55%;
     --sage: 150 20% 75%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(40 33% 97%), hsl(350 55% 95%));
-    --gradient-warm: linear-gradient(135deg, hsl(40 33% 95%), hsl(270 35% 95%));
-    --gradient-cta: linear-gradient(135deg, hsl(350 55% 62%), hsl(350 65% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(40 33% 97%), hsl(300 100% 98%));
+    --gradient-warm: linear-gradient(135deg, hsl(40 33% 95%), hsl(300 100% 97%));
+    --gradient-cta: linear-gradient(135deg, #FF00FF, #D400D4);
 
     /* Shadows */
-    --shadow-soft: 0 2px 20px -4px hsl(20 20% 15% / 0.08);
-    --shadow-card: 0 4px 30px -8px hsl(20 20% 15% / 0.1);
-    --shadow-hover: 0 8px 40px -12px hsl(350 55% 62% / 0.2);
+    --shadow-soft: 0 2px 20px -4px hsl(300 100% 10% / 0.08);
+    --shadow-card: 0 4px 30px -8px hsl(300 100% 10% / 0.1);
+    --shadow-hover: 0 8px 40px -12px hsl(300 100% 50% / 0.2);
 
     /* Typography */
     --font-display: 'Cormorant Garamond', Georgia, serif;
@@ -81,19 +81,19 @@
     --card-foreground: 40 20% 95%;
     --popover: 20 15% 10%;
     --popover-foreground: 40 20% 95%;
-    --primary: 350 55% 65%;
+    --primary: 300 100% 55%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 30% 20%;
     --secondary-foreground: 210 30% 90%;
     --muted: 20 10% 18%;
     --muted-foreground: 20 10% 60%;
-    --accent: 270 25% 25%;
-    --accent-foreground: 270 30% 90%;
+    --accent: 300 100% 20%;
+    --accent-foreground: 300 100% 90%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
     --border: 20 10% 18%;
     --input: 20 10% 18%;
-    --ring: 350 55% 65%;
+    --ring: 300 100% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

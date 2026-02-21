@@ -65,15 +65,15 @@ const ProductDetail = () => {
               <span className="font-body text-sm text-muted-foreground">{product.rating} ({product.reviews} reviews)</span>
             </div>
 
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">{product.name}</h1>
-            <p className="font-body text-muted-foreground mb-4">{product.category} • {product.age}</p>
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-2 tracking-tight">{product.name}</h1>
+            <p className="font-body text-primary/70 font-medium mb-4">{product.category} • {product.age}</p>
 
-            <div className="flex items-baseline gap-3 mb-8">
-              <span className="font-display text-3xl font-bold text-foreground">₹{product.price.toLocaleString()}</span>
+            <div className="flex items-baseline gap-3 mb-8 p-4 bg-primary/5 rounded-2xl border border-primary/10">
+              <span className="font-display text-4xl font-bold text-primary">₹{product.price.toLocaleString()}</span>
               {product.originalPrice && (
                 <>
-                  <span className="font-body text-lg text-muted-foreground line-through">₹{product.originalPrice.toLocaleString()}</span>
-                  <span className="font-body text-sm font-semibold text-primary">{discount}% OFF</span>
+                  <span className="font-body text-xl text-muted-foreground line-through decoration-primary/30">₹{product.originalPrice.toLocaleString()}</span>
+                  <span className="font-body text-sm font-bold bg-primary text-primary-foreground px-2.5 py-1 rounded-lg shadow-[0_2px_10px_rgba(255,0,255,0.3)] animate-pulse">{discount}% OFF</span>
                 </>
               )}
             </div>

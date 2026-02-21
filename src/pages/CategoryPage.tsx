@@ -106,24 +106,40 @@ const CategoryPage = () => {
   };
 
   const FilterSection = ({ title, options, groupKey }: { title: string; options: string[]; groupKey: string }) => (
-    <div className="mb-6">
-      <h4 className="font-body text-sm font-semibold text-foreground mb-3">{title}</h4>
-      <div className="space-y-2">
+    <div className="mb-8 bg-card/50 p-4 rounded-xl border border-border/50 shadow-sm transition-all hover:shadow-md hover:bg-card">
+      <h4 className="font-display text-base font-bold text-foreground mb-4 pb-2 border-b border-primary/10 tracking-wide">{title}</h4>
+      <div className="grid grid-cols-1 gap-2.5">
         {options.map((option) => {
           const isSelected = (selectedFilters[groupKey] || []).includes(option);
           return (
-            <label key={option} className="flex items-center gap-2.5 cursor-pointer group">
+            <label 
+              key={option} 
+              className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-all duration-200 group ${
+                isSelected 
+                  ? "bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20" 
+                  : "hover:bg-muted/50 text-muted-foreground hover:text-foreground"
+              }`}
+            >
               <div
-                className={`w-4 h-4 rounded border-2 transition-colors flex items-center justify-center ${isSelected ? "bg-primary border-primary" : "border-border group-hover:border-primary/50"}`}
-                onClick={() => toggleFilter(groupKey, option)}
+                className={`w-5 h-5 rounded-md border-2 transition-all duration-300 flex items-center justify-center shrink-0 ${
+                  isSelected 
+                    ? "bg-primary border-primary scale-110 shadow-[0_0_10px_rgba(255,0,255,0.3)]" 
+                    : "border-border group-hover:border-primary/40"
+                }`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleFilter(groupKey, option);
+                }}
               >
                 {isSelected && (
-                  <svg className="w-2.5 h-2.5 text-primary-foreground" fill="currentColor" viewBox="0 0 12 12">
-                    <path d="M10 3L4.5 8.5 2 6" stroke="currentColor" strokeWidth="2" fill="none" />
+                  <svg className="w-3 h-3 text-primary-foreground stroke-[3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 )}
               </div>
-              <span className="font-body text-sm text-muted-foreground group-hover:text-foreground transition-colors">{option}</span>
+              <span className={`font-body text-sm font-medium transition-colors ${isSelected ? "text-primary font-bold" : ""}`}>
+                {option}
+              </span>
             </label>
           );
         })}

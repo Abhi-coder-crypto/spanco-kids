@@ -23,11 +23,11 @@ const Header = () => {
               <Search className="h-5 w-5 text-foreground" />
             </button>
 
-            <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-              <h1 className="font-display text-2xl md:text-3xl font-bold tracking-wider text-foreground">
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 group">
+              <h1 className="font-display text-2xl md:text-3xl font-bold tracking-[0.15em] text-primary transition-all duration-300 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(255,0,255,0.4)]">
                 SPANCO
               </h1>
-              <p className="text-[9px] tracking-[0.3em] text-muted-foreground text-center uppercase">
+              <p className="text-[9px] tracking-[0.3em] text-primary/70 text-center uppercase font-bold">
                 Kids Fashion
               </p>
             </Link>

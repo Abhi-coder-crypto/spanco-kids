@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <h3 className="font-display text-2xl font-bold text-primary-foreground mb-2">
+            <h3 className="font-display text-2xl font-bold text-primary mb-2">
               SPANCO
             </h3>
-            <p className="text-xs tracking-[0.2em] text-primary-foreground/50 uppercase mb-4">
+            <p className="text-xs tracking-[0.2em] text-primary/70 uppercase font-bold mb-4">
               Kids Fashion
             </p>
             <p className="font-body text-sm text-primary-foreground/60 mb-6">

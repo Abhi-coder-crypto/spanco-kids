@@ -8,10 +8,10 @@ const BestSellers = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-2">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-2">
               Best Sellers
             </h2>
-            <p className="font-body text-muted-foreground">
+            <p className="font-body text-primary/60 font-medium">
               Most loved styles by parents everywhere
             </p>
           </div>
